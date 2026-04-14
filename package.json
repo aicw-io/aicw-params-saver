@@ -1,0 +1,51 @@
+{
+  "name": "aicw-params-saver",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Lightweight, GDPR-compliant URL parameter capture and link decoration widget — embed with a single script tag",
+  "type": "module",
+  "main": "dist/aicw-params-saver.js",
+  "module": "dist/aicw-params-saver.esm.js",
+  "types": "dist/aicw-params-saver.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "build:watch": "rollup -c -w",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "url",
+    "parameters",
+    "utm",
+    "tracking",
+    "attribution",
+    "marketing",
+    "analytics",
+    "localStorage",
+    "spa",
+    "gdpr"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aicw-io/aicw-params-saver.git"
+  },
+  "homepage": "https://github.com/aicw-io/aicw-params-saver#readme",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@types/node": "^20.11.0",
+    "jsdom": "^24.0.0",
+    "rollup": "^4.9.6",
+    "rollup-plugin-dts": "^6.1.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0"
+  }
+}

@@ -244,4 +244,4 @@ npm run build:watch
 
 ## License
 
-MIT
+MIT - made by [AICW](https://www.aicw.io)

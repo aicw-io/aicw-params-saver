@@ -1,8 +1,18 @@
 # AICW Params Saver
 
-Lightweight, GDPR-compliant URL parameter capture and link decoration. Saves UTM and marketing parameters from visitor URLs, stores them in the browser, and automatically decorates internal links — so attribution survives the entire user journey.
+This script captures `utm_` params with values and adds them to internal links on the page. If a website visitor clicks on a link to go to another page on your website, `utm_` params will be preserved. 
 
-Zero dependencies. No cookies by default. Embed with a single `<script>` tag.
+**Example:**
+
+- User visits this page: [www.aicw.io?utm_source=github](https://www.aicw.io?utm_source=github)
+- Script automatically adds this `utm_source=github` param with value to all internal links on the page
+- So link like `/aicw-summarize` becomes `/aicw-summarize?utm_source=github`
+- Visitor clicks on this link [www.aicw.io/aicw-summarize?utm_source=github](www.aicw.io/aicw-summarize?utm_source=github)
+- Until script is used on all pages, this `utm_source=github` will be preserved for visitor during the whole journey over your website
+
+# Short Video Demo
+
+![aicw params saver gif](aicw-params-saver.gif)
 
 ## Quick Start
 
@@ -241,10 +251,10 @@ npm run build:watch
 - **SPA-ready** — MutationObserver + History API hooks for dynamic apps
 - **Graceful fallback** — storage backends fall back in priority order
 
-## Testing links:
+## Testing Links Decoration
 
-- Open console in a web browser
-- Copy paste and run this JS code that will output all hovered links to the console:
+- Open dev console in a web browser (`Cmd+Shift+I` or `Ctrl+Shift+I`)
+- Copy paste and run the JS code below that will output all hovered links to the dev console:
 
 ```
 window.addEventListener("mouseover", event => {
@@ -254,6 +264,7 @@ window.addEventListener("mouseover", event => {
   }
 });
 ```
+
 - in the same browser window open website with aicw params saver installed, use url with utm param added, for example: https://aicw.io?utm_campaign=github-aicw-params-saver
 - move mouse over other links on the web page to see these links now all have `utm_campaign=github-aicw-params-saver` param and value added
 

@@ -240,8 +240,24 @@ npm run build:watch
 - **No third-party requests** — all data stays in the user's browser
 - **SPA-ready** — MutationObserver + History API hooks for dynamic apps
 - **Graceful fallback** — storage backends fall back in priority order
-- **~5 KB minified + gzipped** — lightweight enough for any website
+
+## Testing links:
+
+- Open console in a web browser
+- Copy paste and run this JS code that will output all hovered links to the console:
+
+```
+window.addEventListener("mouseover", event => {
+  const link = event.target.closest("a");
+  if (link && link.href) {
+    console.log("Hovered Link:", link.href);
+  }
+});
+```
+- in the same browser window open website with aicw params saver installed, use url with utm param added, for example: https://aicw.io?utm_campaign=github-aicw-params-saver
+- move mouse over other links on the web page to see these links now all have `utm_campaign=github-aicw-params-saver` param and value added
+
 
 ## License
 
-MIT - made by [AICW](https://www.aicw.io)
+MIT - made by Eugene Mironichev [AICW.io](https://www.aicw.io)
